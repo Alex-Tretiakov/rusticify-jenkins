@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Building'
         pwd(tmp: true)
-        sh 'sh "cargo"'
+        sh 'sh "ls"'
       }
     }
 
