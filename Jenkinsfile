@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        sh 'sh "cargo build --release"'
+        sh 'sh "cargo build"'
       }
     }
 
