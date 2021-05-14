@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        sh 'sh "cargo test https://github.com/AlexTretiakov-wr/rusticify-jenkins/tree/main/src/main.rs"'
+        sh 'sh "cargo build --release"'
       }
     }
 
