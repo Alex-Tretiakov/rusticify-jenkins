@@ -4,14 +4,14 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        sh 'Jenkins/build.sh'
+        sh 'cargo build --release'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Testing'
-        sh 'Jenkins/test-all.sh'
+        sh 'cargo test'
       }
     }
 
