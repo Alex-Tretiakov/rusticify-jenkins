@@ -8,12 +8,17 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Test') {
       steps {
         sh 'cd src'
         sh 'ls'
-        sh '$HOME/.cargo/env cargo test'
-        sh '$HOME/.cargo/env cargo build --release'
+        sh '$HOME/.cargo/env cargo test main.rs'
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh '$HOME/.cargo/env cargo build --release main.rs'
       }
     }
 
