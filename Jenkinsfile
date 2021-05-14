@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh 'cd src'
         sh 'ls'
-        sh '$HOME/.cargo/env cargo test main.rs'
+        sh '$HOME/.rustup/env rust main.rs'
       }
     }
 
