@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh 'cd src'
         sh 'ls'
-        sh '$HOME/.cargo/env cargo test main.rs'
+        sh 'script: \'$HOME/.cargo/env cargo test main.rs\', returnStdout: true'
       }
     }
 
