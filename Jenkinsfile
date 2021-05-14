@@ -4,20 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        pwd(tmp: true)
         sh 'sh "ls"'
-      }
-    }
-
-    stage('Test') {
-      steps {
-        echo 'Testing'
-      }
-    }
-
-    stage('Deploy') {
-      steps {
-        echo 'Deploying'
+        git(url: 'https://github.com/AlexTretiakov-wr/rusticify-jenkins', branch: 'main')
       }
     }
 
