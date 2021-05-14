@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        sh 'sh "main.rs"'
+        sh 'sh "https://github.com/AlexTretiakov-wr/rusticify-jenkins/tree/main/src"'
       }
     }
 
