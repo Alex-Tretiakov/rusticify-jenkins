@@ -24,7 +24,7 @@ pipeline {
 
     stage('Archive') {
       steps {
-        archiveArtifacts(defaultExcludes: true, artifacts: 'main.rs')
+        archiveArtifacts(defaultExcludes: true, artifacts: 'src/main.rs')
       }
     }
 
