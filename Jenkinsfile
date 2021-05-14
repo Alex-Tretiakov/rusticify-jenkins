@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh 'cd src'
         sh 'ls'
-        sh 'main.rs'
+        sh 'cargo build --release'
       }
     }
 
