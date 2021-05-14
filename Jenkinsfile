@@ -24,7 +24,7 @@ pipeline {
 
     stage('Archive') {
       steps {
-        archiveArtifacts(defaultExcludes: true, artifacts: 'src/main.rs')
+        archiveArtifacts(defaultExcludes: true, artifacts: 'build/libs/**/*.jar', onlyIfSuccessful: true)
       }
     }
 
