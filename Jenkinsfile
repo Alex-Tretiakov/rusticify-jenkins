@@ -8,9 +8,9 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Build') {
       steps {
-        sh 'cargo build '
+        sh 'ls'
       }
     }
 
