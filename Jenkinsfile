@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        sh 'sh "cargo build src/main.rs"'
+        sh 'sh "cargo test src/main.rs"'
       }
     }
 
