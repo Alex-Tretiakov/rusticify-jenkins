@@ -24,7 +24,7 @@ pipeline {
 
     stage('Archive') {
       steps {
-        archiveArtifacts(defaultExcludes: true, artifacts: '**/*.txt', onlyIfSuccessful: true, allowEmptyArchive: true)
+        archiveArtifacts(defaultExcludes: true, artifacts: '**/*.rs', onlyIfSuccessful: true, allowEmptyArchive: true)
       }
     }
 
