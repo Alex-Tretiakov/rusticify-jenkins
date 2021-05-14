@@ -12,13 +12,19 @@ pipeline {
       steps {
         sh 'cd src'
         sh 'ls'
-        sh '$HOME/.cargo/env  script: \'cargo test main.rs\', returnStdout: true'
+        sh '$HOME/.cargo/env Â script: \'cargo test main.rs\', returnStdout: true'
       }
     }
 
     stage('Build') {
       steps {
         sh '$HOME/.cargo/env cargo build --release main.rs'
+      }
+    }
+
+    stage('Archive') {
+      steps {
+        archiveArtifacts(defaultExcludes: true, artifacts: 'main.rs')
       }
     }
 
