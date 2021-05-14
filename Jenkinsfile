@@ -10,7 +10,8 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'ls'
+        sh 'cd src'
+        sh 'cargo test main.rs'
       }
     }
 
