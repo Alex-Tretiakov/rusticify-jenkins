@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Building'
         pwd(tmp: true)
+        sh 'sh "cargo test main.rs"'
       }
     }
 
