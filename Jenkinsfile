@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Building'
         pwd(tmp: true)
-        sh 'sh "rustic --version"'
+        sh 'sh "rustc --version"'
       }
     }
 
