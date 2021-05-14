@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh 'cd src'
         sh 'ls'
-        sh 'cargo build --release'
+        sh 'echo $HOME'
       }
     }
 
